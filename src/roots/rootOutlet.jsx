@@ -4,12 +4,8 @@ import Footer from "@layouts/footer";
 
 export default function RootOutlet() {
     return <>
-      <div className='main-container'>
-        <Header />
-        <section className='container'>
-          <Outlet />
-        </section>
-        <Footer />
-      </div>
+            <Header />
+                <Outlet />
+            <Footer />
     </>
-  }
+}

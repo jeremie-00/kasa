@@ -21,7 +21,11 @@ function Router() {
                             <Home />
                         </>
                     ),
-                    errorElement: <PageError />,                 
+                    errorElement: <PageError />, 
+                    loader: () => {
+                        const data = fetch('/logements.json').then(response => response.json())
+                        return defer({ data })
+                    }                
                 },
                 {
                     path: '/about',

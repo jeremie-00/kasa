@@ -1,6 +1,9 @@
 @import './styles/header';
 @import './styles/footer';
 @import './styles/banner';
+@import './styles/spinner';
+@import './styles/thumb';
+
 
 *{
   margin: 0;
@@ -9,8 +12,17 @@
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
+
+// .main-container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }

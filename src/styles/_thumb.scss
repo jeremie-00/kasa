@@ -1,0 +1,52 @@
+
+.locations {
+    max-width: 1240px;
+    height: auto;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px 60px;
+    padding: 50px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.containerCard {
+
+    // width: 100%;
+    // height: 100%;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+
+    .contentCard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    
+        .imgCard {
+            width: 100%;
+            height: 100%; 
+            border-radius: 10px;
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(to bottom,transparent,transparent,rgba(0,0,0,.5));
+        }
+        h2 {
+            position: absolute;
+            font-size: 18px;
+            bottom: 0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    }
+}
+
