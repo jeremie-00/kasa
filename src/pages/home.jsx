@@ -8,7 +8,9 @@ import Thumb from "@components/thumb"
 import srcBannerHome from '@assets/banner_home.png';
 
 export default function Home() {
+    //recupere une promise
     const { data } = useLoaderData()
+
     return <>
         <Banner cls='home-banner' srcBanner={srcBannerHome}>
             <h1>Chez vous, partout et ailleurs</h1>
