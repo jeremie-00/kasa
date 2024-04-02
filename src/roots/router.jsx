@@ -2,7 +2,7 @@ import * as React from "react";
 import { createBrowserRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
-import Home from "../pages/home"
+import Home from "@pages/home"
 function Router() {
 
     const router = createBrowserRouter([
