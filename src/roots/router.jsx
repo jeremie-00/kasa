@@ -4,6 +4,8 @@ import { createBrowserRouter, defer } from 'react-router-dom';
 import RootOutlet from "./rootOutlet";
 import PageError from "@pages/error"
 import Home from "@pages/home";
+import About from "@pages/about";
+
 function Router() {
 
     const router = createBrowserRouter([
@@ -17,6 +19,15 @@ function Router() {
                     element: (
                         <>  
                             <Home />
+                        </>
+                    ),
+                    errorElement: <PageError />,                 
+                },
+                {
+                    path: '/about',
+                    element: (
+                        <>  
+                            <About />
                         </>
                     ),
                     errorElement: <PageError />,                 
