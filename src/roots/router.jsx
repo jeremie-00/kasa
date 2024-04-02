@@ -16,15 +16,11 @@ function Router() {
             children: [
                 {
                     path: '/',
-                    element: (
-                        <>  
-                            <Home />
-                        </>
-                    ),
+                    element: <Home />,
                     errorElement: <PageError />, 
                     loader: () => {
                         const data = fetch('/logements.json').then(response => response.json())
-                        return defer({ data })
+                        return defer({ data })                        
                     }                
                 },
                 {
