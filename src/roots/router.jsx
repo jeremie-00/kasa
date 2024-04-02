@@ -12,19 +12,15 @@ function Router() {
         {
             path: '/',
             element: <RootOutlet />,
+            //affiche la page erreur si une erreur est capturée (url ou composent)
             errorElement: <PageError />,
             children: [
                 {
                     path: '/',
-                    element: (
-                        <>  
-                            <Home />
-                        </>
-                    ),
-                    errorElement: <PageError />, 
+                    element: <Home />,
                     loader: () => {
                         const data = fetch('/logements.json').then(response => response.json())
-                        return defer({ data })
+                        return defer({ data })                        
                     }                
                 },
                 {
@@ -33,8 +29,7 @@ function Router() {
                         <>  
                             <About />
                         </>
-                    ),
-                    errorElement: <PageError />,                 
+                    ),            
                 },
             ]
         }
