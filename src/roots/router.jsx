@@ -2,6 +2,7 @@ import * as React from "react";
 import { createBrowserRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
+import PageError from "@pages/error"
 import Home from "@pages/home";
 function Router() {
 
@@ -9,7 +10,7 @@ function Router() {
         {
             path: '/',
             element: <RootOutlet />,
-            errorElement: <div>error</div>,
+            errorElement: <PageError />,
             children: [
                 {
                     path: '/',
@@ -18,7 +19,7 @@ function Router() {
                             <Home />
                         </>
                     ),
-                    errorElement: <div>error</div>,                 
+                    errorElement: <PageError />,                 
                 },
             ]
         }
