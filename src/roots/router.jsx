@@ -20,16 +20,13 @@ function Router() {
                     element: <Home />,
                     loader: () => {
                         const data = fetch('/logements.json').then(response => response.json())
-                        return defer({ data })                        
-                    }                
+                        return defer({ data })
+                    }
                 },
                 {
                     path: '/about',
-                    element: (
-                        <>  
-                            <About />
-                        </>
-                    ),            
+                    element: <About />,
+
                 },
             ]
         }
