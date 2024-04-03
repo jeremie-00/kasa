@@ -1,5 +1,5 @@
 import React from "react";
-import { useAsyncValue, useLoaderData, Await } from 'react-router-dom';
+import { useLoaderData, Await } from 'react-router-dom';
 import { Suspense } from "react";
 
 import Banner from "@components/banner";

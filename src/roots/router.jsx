@@ -26,6 +26,10 @@ function Router() {
                 {
                     path: '/about',
                     element: <About />,
+                    loader: () => {
+                        const data = fetch('/texte_collaps.json').then(response => response.json())
+                        return defer({ data })
+                    }
 
                 },
             ]
