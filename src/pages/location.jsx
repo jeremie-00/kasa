@@ -7,6 +7,7 @@ import Collaps from "@components/collaps";
 import Tag from "@components/tag";
 import Rating from "@components/rating";
 import Host from "@components/host";
+import SlideShow from "@components/slideshow";
 
 export default function Location() {
     //recupere une promise
@@ -20,17 +21,19 @@ export default function Location() {
                     {(data) => {
                         
                         const locationData = data.find((d) => d.id === idUrl.id);
-                        const { id, equipments, description, tags, rating, title, location } = locationData
+                        const { equipments, description, tags, rating, title, location, pictures } = locationData
                         const { name, picture } = locationData.host
 
-                        console.log(locationData)
+                        //console.log(locationData)
 
                         const cles = Object.keys(locationData);
-                        console.log(cles)
+                        //console.log(cles)
 
                         if (locationData) {
                             return (
                                 <>
+
+                                <SlideShow pictures={pictures} />
                                     <div className="title">
                                         <h1>{title}</h1>
                                         <h2>{location}</h2>
