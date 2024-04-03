@@ -5,7 +5,6 @@ import { Suspense } from "react";
 import Banner from "@components/banner";
 import Spinner from "@components/spinner";
 import Collaps from "@components/collaps";
-import ElementP from "@components/element_P";
 import srcBannerAbout from '@assets/banner_about.png';
 
 export default function About() {
@@ -21,7 +20,7 @@ export default function About() {
                             key={d.id}
                             title={d.title}
                         >
-                            <ElementP txt={d.text} />
+                           <p >{d.text}</p>
                         </ Collaps>
                     ))
                 )}

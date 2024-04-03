@@ -9,9 +9,6 @@
   display: flex;
   gap: 57px;
 }
-.header .nav a {
-  color: white;
-}
 .header .active {
   text-decoration: underline;
 }
@@ -172,6 +169,31 @@
   transition: transform 1.2s ease-in-out;
 }
 
+.tag {
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #FF6060;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.host {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.host h2 {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: end;
+  flex-basis: 50%;
+}
+.host .imgHost {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -181,9 +203,23 @@
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
+.gap-20 {
+  gap: 20px;
 }/*# sourceMappingURL=App.css.map */

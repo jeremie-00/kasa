@@ -1,0 +1,16 @@
+
+.host {
+    width: -moz-fit-content;
+    width: fit-content;
+    h2 {
+        font-size: 18px;
+        font-weight: 300;
+        text-align: end;
+        flex-basis: 50%;
+    }
+    .imgHost {
+        border-radius: 100%;
+        width: 64px;
+        height: 64px;
+    }
+}
