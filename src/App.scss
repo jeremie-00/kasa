@@ -3,12 +3,14 @@
 @import './styles/banner';
 @import './styles/spinner';
 @import './styles/thumb';
+@import './styles/collaps';
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
   color: white;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
@@ -20,10 +22,3 @@
   width: 100%;
 }
 
-
-
-// .main-container {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }

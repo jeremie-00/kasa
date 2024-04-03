@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import arrowCollaps from '@assets/arrow_collaps.png';
 
-export default function Collaps({ txt, key, title }) {
+export default function Collaps({ children, key, title }) {
     const [active, setActive] = useState(false)
 
     const handleToggle = () => {
@@ -21,7 +21,7 @@ export default function Collaps({ txt, key, title }) {
                 />
             </div>
             <div className='content-collaps'>
-                {txt}
+                {children}
             </div>
         </div>
     )

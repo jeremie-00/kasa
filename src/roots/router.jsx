@@ -5,6 +5,7 @@ import RootOutlet from "./rootOutlet";
 import PageError from "@pages/error"
 import Home from "@pages/home";
 import About from "@pages/about";
+import Location from "@pages/location";
 
 function Router() {
 
@@ -28,6 +29,15 @@ function Router() {
                     element: <About />,
                     loader: () => {
                         const data = fetch('/texte_collaps.json').then(response => response.json())
+                        return defer({ data })
+                    }
+
+                },
+                {
+                    path: '/location/:id',
+                    element: <Location />,
+                    loader: () => {
+                        const data = fetch('/logements.json').then(response => response.json())
                         return defer({ data })
                     }
 
