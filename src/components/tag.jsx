@@ -1,5 +1,5 @@
-export default function Tag({key, txt}) {
+export default function Tag({txt}) {
     return (
-      <button key={key} className="tag">{txt}</button>
+      <button className="tag">{txt}</button>
     )
   }

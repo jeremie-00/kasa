@@ -18,30 +18,37 @@ export default function Location() {
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
+                        
                         const locationData = data.find((d) => d.id === idUrl.id);
-                        const { equipments, description, tags, rating } = locationData
+                        const { id, equipments, description, tags, rating, title, location } = locationData
                         const { name, picture } = locationData.host
-                        console.log(locationData.host)
+
+                        console.log(locationData)
+
+                        const cles = Object.keys(locationData);
+                        console.log(cles)
 
                         if (locationData) {
                             return (
                                 <>
-                                <Host name={name} picture={picture} />
-                                <Rating rating={rating} /> 
-                                <div className="flexRow gap-20">
-                                    {tags.map((txt, index) => (
-                                        <Tag key={index} txt={txt} />
-                                    ))}
-                                </div>
+                                    <div className="title">
+                                        <h1>{title}</h1>
+                                        <h2>{location}</h2>
+                                    </div>
+                                    <Host name={name} picture={picture} />
+                                    <Rating rating={rating} />
+                                    <div className="flexRow gap-20">
+                                        {tags.map((txt, index) => (
+                                            <Tag key={index} txt={txt} />
+                                        ))}
+                                    </div>
                                     <Collaps
-                                        key={locationData.id + "description"}
                                         title="Description"
                                     >
                                         <p >{description}</p>
                                     </Collaps>
 
                                     <Collaps
-                                        key={locationData.id + "equipments"}
                                         title="Équipements"
                                     >
                                         <ul>
