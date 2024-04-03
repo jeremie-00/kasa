@@ -6,13 +6,16 @@ import arrowRight from "@assets/arrow_right.png"
 export default function SlideShow({ pictures }) {
     const [activeIndex, setActiveIndex] = useState(0)
 
-    console.log(pictures.length)
+    
 
     const handlePrev = () => {
+        //prevIndex = valeur précedente fonction "callback"
+        // si prevIndex === 0 alors on affiche la derniere picture sinon -1
         setActiveIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1))
     }
 
     const handleNext = () => {
+        // si prevIndex === la derniere picture alors on renvoi 0 sinon +1
         setActiveIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1))
     }
 
