@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import Spinner from "@components/spinner";
 import Collaps from "@components/collaps";
 import Tag from "@components/tag";
-
+import Rating from "@components/rating";
 
 
 import ElementP from "@components/element_P";
@@ -22,13 +22,14 @@ export default function Location() {
                 <Await resolve={data}>
                     {(data) => {
                         const locationData = data.find((d) => d.id === idUrl.id);
-                        const { equipments, description, tags } = locationData
+                        const { equipments, description, tags, rating } = locationData
 
                         console.log(locationData)
 
                         if (locationData) {
                             return (
                                 <>
+                                <Rating rating={rating} /> 
                                 <div className="flexRow gap-20">
                                     {tags.map((txt, index) => (
                                         <Tag key={index} txt={txt} />
