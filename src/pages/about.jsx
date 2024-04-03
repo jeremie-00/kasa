@@ -21,7 +21,7 @@ export default function About() {
                             key={d.id}
                             title={d.title}
                         >
-                            <ElementP txt={d.text} />
+                           <p >{d.text}</p>
                         </ Collaps>
                     ))
                 )}

@@ -4,7 +4,7 @@
 @import './styles/spinner';
 @import './styles/thumb';
 @import './styles/collaps';
-
+@import './styles/tag';
 
 * {
   margin: 0;
@@ -15,10 +15,16 @@
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100%; 
 }
 

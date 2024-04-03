@@ -9,9 +9,6 @@
   display: flex;
   gap: 57px;
 }
-.header .nav a {
-  color: white;
-}
 .header .active {
   text-decoration: underline;
 }
@@ -172,6 +169,15 @@
   transition: transform 1.2s ease-in-out;
 }
 
+.tag {
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #FF6060;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -179,6 +185,11 @@
   list-style-type: none;
   color: white;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
 #root {
