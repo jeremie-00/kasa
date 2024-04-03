@@ -23,7 +23,7 @@ export default function Home() {
                             <Thumb
                                 key={d.id}
                                 id={d.id}
-                                txt={d.title}
+                                title={d.title}
                                 cover={d.cover}
                             />
                         ))
