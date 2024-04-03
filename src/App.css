@@ -178,6 +178,22 @@
   padding: 5px 15px;
 }
 
+.host {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.host h2 {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: end;
+  flex-basis: 50%;
+}
+.host .imgHost {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+}
+
 * {
   margin: 0;
   padding: 0;

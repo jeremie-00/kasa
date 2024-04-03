@@ -6,10 +6,7 @@ import Spinner from "@components/spinner";
 import Collaps from "@components/collaps";
 import Tag from "@components/tag";
 import Rating from "@components/rating";
-
-
-import ElementP from "@components/element_P";
-import ElementUl from "@components/element_Ul";
+import Host from "@components/host";
 
 export default function Location() {
     //recupere une promise
@@ -23,12 +20,13 @@ export default function Location() {
                     {(data) => {
                         const locationData = data.find((d) => d.id === idUrl.id);
                         const { equipments, description, tags, rating } = locationData
-
-                        console.log(locationData)
+                        const { name, picture } = locationData.host
+                        console.log(locationData.host)
 
                         if (locationData) {
                             return (
                                 <>
+                                <Host name={name} picture={picture} />
                                 <Rating rating={rating} /> 
                                 <div className="flexRow gap-20">
                                     {tags.map((txt, index) => (
