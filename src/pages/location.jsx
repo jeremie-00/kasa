@@ -29,6 +29,11 @@ export default function Location() {
                         if (locationData) {
                             return (
                                 <>
+                                <div className="flexRow gap-20">
+                                    {tags.map((txt, index) => (
+                                        <Tag key={index} txt={txt} />
+                                    ))}
+                                </div>
                                     <Collaps
                                         key={locationData.id + "description"}
                                         title="Description"
@@ -46,11 +51,6 @@ export default function Location() {
                                             ))}
                                         </ul>
                                     </Collaps>
-
-                                    {tags.map((txt, index) =>  (
-                                        <Tag key={index} txt={txt} />
-                                    ))}
-
                                 </>
 
                             );
