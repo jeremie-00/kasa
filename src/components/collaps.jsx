@@ -10,17 +10,17 @@ export default function Collaps({ children, title }) {
     }
 
     return (
-        <div className="container-collaps">
+        <div className={active ? 'container-collaps open' : 'container-collaps'}>
             <div className="collaps">
                 <h2>{title}</h2>
                 <img
-                    className='arrow'
+                    className={active ? 'arrow rotate' : 'arrow'}
                     src={arrowCollaps}
                     alt='arrow'
                     onClick={handleToggle}
                 />
             </div>
-            <div className='content-collaps'>
+            <div className={active ? 'content-collaps' : 'content-collaps hidden'}>
                 {children}
             </div>
         </div>
