@@ -17,5 +17,5 @@ export default function Rating({rating}) {
            )
         }
      
-        return <>{stars}</>
+        return <div>{stars}</div>
 }

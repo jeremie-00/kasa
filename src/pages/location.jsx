@@ -15,7 +15,7 @@ export default function Location() {
     const idUrl = useParams()
 
     return <>
-        <div className="location">
+        <div className="flexColumn">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
@@ -24,7 +24,7 @@ export default function Location() {
                         const { equipments, description, tags, rating, title, location, pictures } = locationData
                         const { name, picture } = locationData.host
 
-                        //console.log(locationData)
+                        console.log(pictures.length)
 
                         const cles = Object.keys(locationData);
                         //console.log(cles)
@@ -39,7 +39,9 @@ export default function Location() {
                                         <h2>{location}</h2>
                                     </div>
                                     <Host name={name} picture={picture} />
+                                    
                                     <Rating rating={rating} />
+                                    
                                     <div className="flexRow gap-20">
                                         {tags.map((txt, index) => (
                                             <Tag key={index} txt={txt} />

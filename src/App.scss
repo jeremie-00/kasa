@@ -16,6 +16,10 @@
   text-decoration: none;
   color: white;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
+  //cursor: default;
+}
+h1,h2,h3,h4,h5,h6,p,span {
+  cursor: default;
 }
 
 :root {
@@ -36,6 +40,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
 .gap-20 {
   gap: 20px;
 }
