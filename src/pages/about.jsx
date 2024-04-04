@@ -12,19 +12,22 @@ export default function About() {
 
     return <>
         <Banner cls='about-banner' srcBanner={srcBannerAbout} />
+        <div className="flexColumn width-70 ">
         <Suspense fallback={<Spinner />}>
             <Await resolve={data}>
                 {(data) => (
                     data.map(d => (
-                        <Collaps
-                            key={d.id}
-                            title={d.title}
-                        >
-                           <p >{d.text}</p>
-                        </ Collaps>
+                        
+                            <Collaps
+                                key={d.id}
+                                title={d.title}
+                            >
+                                <p >{d.text}</p>
+                            </ Collaps>   
                     ))
                 )}
             </Await>
         </Suspense>
+        </div>
     </>
 }

@@ -15,7 +15,7 @@ export default function Home() {
         <Banner cls='home-banner' srcBanner={srcBannerHome}>
             <h1>Chez vous, partout et ailleurs</h1>
         </Banner>
-        <div className="logements">
+        <div className="logements width-80">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => (

@@ -1,8 +1,7 @@
 .container-collaps {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    max-width: 1240px;
+    width: 100%;
     border: 1px solid blue;
     overflow: hidden;
     transition: height 1.2s ease-in-out;
@@ -19,7 +18,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        background-color: #FF6060;
+        background-color: $color_orange;
         border-radius: 5px;
         padding: 15px 20px;
         gap: 10px;
