@@ -7,6 +7,7 @@ import Collaps from "@components/collaps";
 import Tag from "@components/tag";
 import Rating from "@components/rating";
 import Host from "@components/host";
+import SlideShow from "@components/slideshow";
 
 export default function Location() {
     //recupere une promise
@@ -14,49 +15,57 @@ export default function Location() {
     const idUrl = useParams()
 
     return <>
-        <div className="location">
+        <div className="flexColumn gap-20 width-80">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
-                        
+
                         const locationData = data.find((d) => d.id === idUrl.id);
-                        const { id, equipments, description, tags, rating, title, location } = locationData
+                        const { equipments, description, tags, rating, title, location, pictures } = locationData
                         const { name, picture } = locationData.host
 
-                        console.log(locationData)
+                        console.log(pictures.length)
 
                         const cles = Object.keys(locationData);
-                        console.log(cles)
+                        //console.log(cles)
 
                         if (locationData) {
                             return (
                                 <>
-                                    <div className="title">
-                                        <h1>{title}</h1>
-                                        <h2>{location}</h2>
+                                    <SlideShow pictures={pictures} />
+                                    <div className="flexBeteew">
+                                        <div className='titleCard'>
+                                            <h1>{title}</h1>
+                                            <h2>{location}</h2>
+                                        </div>
+                                        <Host name={name} picture={picture} />
                                     </div>
-                                    <Host name={name} picture={picture} />
-                                    <Rating rating={rating} />
-                                    <div className="flexRow gap-20">
-                                        {tags.map((txt, index) => (
-                                            <Tag key={index} txt={txt} />
-                                        ))}
-                                    </div>
-                                    <Collaps
-                                        title="Description"
-                                    >
-                                        <p >{description}</p>
-                                    </Collaps>
 
-                                    <Collaps
-                                        title="Équipements"
-                                    >
-                                        <ul>
-                                            {equipments.map((txt, index) => (
-                                                <li key={index}>{txt}</li>
+                                    <div className="flexBeteew">
+                                        <div className="flexRow gap-20">
+                                            {tags.map((txt, index) => (
+                                                <Tag key={index} txt={txt} />
                                             ))}
-                                        </ul>
-                                    </Collaps>
+                                        </div>
+                                        <Rating rating={rating} />
+                                    </div>
+                                    <div className="flexBeteew gap-20">
+                                        <Collaps
+                                            title="Description"
+                                        >
+                                            <p >{description}</p>
+                                        </Collaps>
+
+                                        <Collaps
+                                            title="Équipements"
+                                        >
+                                            <ul>
+                                                {equipments.map((txt, index) => (
+                                                    <li key={index}>{txt}</li>
+                                                ))}
+                                            </ul>
+                                        </Collaps>
+                                    </div>
                                 </>
 
                             );

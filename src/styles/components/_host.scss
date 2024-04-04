@@ -4,9 +4,10 @@
     width: fit-content;
     h2 {
         font-size: 18px;
-        font-weight: 300;
+        font-weight: $font_medium;
         text-align: end;
         flex-basis: 50%;
+        color: $color_orange;
     }
     .imgHost {
         border-radius: 100%;
