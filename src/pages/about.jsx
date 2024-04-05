@@ -10,24 +10,24 @@ import srcBannerAbout from '@assets/banner_about.png';
 export default function About() {
     const { data } = useLoaderData()
 
-    return <>
+    return <div className="wrapper about">
         <Banner cls='about-banner' srcBanner={srcBannerAbout} />
-        <div className="flexColumn width-70 ">
-        <Suspense fallback={<Spinner />}>
-            <Await resolve={data}>
-                {(data) => (
-                    data.map(d => (
-                        
+        <div className="wrapper width-70 collaps-about">
+            <Suspense fallback={<Spinner />}>
+                <Await resolve={data}>
+                    {(data) => (
+                        data.map(d => (
+
                             <Collaps
                                 key={d.id}
                                 title={d.title}
                             >
                                 <p >{d.text}</p>
-                            </ Collaps>   
-                    ))
-                )}
-            </Await>
-        </Suspense>
+                            </ Collaps>
+                        ))
+                    )}
+                </Await>
+            </Suspense>
         </div>
-    </>
+    </div>
 }
