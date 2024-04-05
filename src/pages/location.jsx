@@ -50,7 +50,7 @@ export default function Location() {
                                         <Rating rating={rating} />
                                     </div>
                                     <div className="flexBetween location-collaps">
-                                        <div className="containerCollaps">
+                                        <div className="container-collaps">
                                         <Collaps
                                             title="Description"
                                         >
