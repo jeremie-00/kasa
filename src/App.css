@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5, h6, p, span {
   width: 100%;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   color: white;
-  gap: 50px;
 }
 
 img {
@@ -34,14 +33,16 @@ img {
 .flexBeteew {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
-.flexColumn {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .width-80 {
@@ -52,18 +53,23 @@ img {
   width: 70%;
 }
 
+.gap-40 {
+  gap: 40px;
+}
+
 .gap-20 {
   gap: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.margin-50 {
+  margin: 50px;
+}
+
+.margin-top-45 {
   margin-top: 45px;
 }
+
 .header .nav {
-  display: flex;
   gap: 57px;
 }
 .header .nav a {
@@ -122,6 +128,7 @@ img {
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
+  margin: 50px;
 }
 
 @keyframes spin {
@@ -236,11 +243,8 @@ img {
   max-height: 59px;
   transition: max-height 1.2s linear;
 }
-.container-collaps.open {
-  transition: max-height 1.2s ease-in-out;
-  max-height: 1000px;
-}
-.container-collaps .collaps {
+
+.collaps {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -248,39 +252,42 @@ img {
   background-color: #FF6060;
   border-radius: 5px;
   padding: 15px 20px;
-  gap: 10px;
 }
-.container-collaps .collaps .arrow {
+.collaps .arrow {
   cursor: pointer;
   width: 24px;
   height: 15px;
   transition: transform 1.2s linear;
 }
-.container-collaps .collaps .rotate {
+.collaps .rotate {
   transform: rotate(-180deg);
   transition: transform 1.2s linear;
 }
-.container-collaps .content-collaps {
-  display: flex;
-  position: relative;
-  z-index: -1;
-  border: 1px solid rgb(251, 255, 0);
-  transform: translateY(0);
-  transition: transform 1.2s ease-out;
+
+.content-collaps {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 1s;
 }
-.container-collaps .content-collaps ul,
-.container-collaps .content-collaps p {
+.content-collaps.visible {
+  visibility: visible;
+  grid-template-rows: 1fr;
+}
+.content-collaps .content {
+  align-self: end;
+  min-height: 0;
+  transition: visibility 1s;
+}
+.content-collaps .content ul,
+.content-collaps .content p {
   padding: 20px;
 }
-.container-collaps .content-collaps li {
+.content-collaps .content li {
   margin-bottom: 5px;
 }
-.container-collaps .hidden {
-  transform: translateY(-100%);
-  transition: transform 1.2s ease-in;
-}
 
-.logements {
+.home-logements {
   background-color: #f6f6f6;
   display: flex;
   flex-wrap: wrap;
@@ -289,6 +296,21 @@ img {
   gap: 40px 55px;
   padding: 55px;
   border-radius: 10px;
+}
+
+.about {
+  margin: 38px;
+}
+.about .wrapper {
+  margin: 0;
+}
+
+.collaps-about .collaps {
+  margin-top: 30px;
+}
+
+.card {
+  align-items: center;
 }
 
 .titleCard h1 {
@@ -300,6 +322,17 @@ img {
   color: rgb(133, 131, 131);
   font-size: 18px;
   font-weight: 500;
+}
+
+.test {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.test2 {
+  flex-basis: 45%;
 }
 
 :root {

@@ -15,7 +15,7 @@ export default function Location() {
     const idUrl = useParams()
 
     return <>
-        <div className="flexColumn gap-20 width-80">
+        <div className="wrapper width-80 margin-50 gap-20">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
@@ -49,13 +49,15 @@ export default function Location() {
                                         </div>
                                         <Rating rating={rating} />
                                     </div>
-                                    <div className="flexBeteew gap-20">
+                                    <div className="test">
+                                        <div className="test2">
                                         <Collaps
                                             title="Description"
                                         >
                                             <p >{description}</p>
                                         </Collaps>
-
+                                        </div>
+                                        <div className="test2">
                                         <Collaps
                                             title="Équipements"
                                         >
@@ -65,6 +67,7 @@ export default function Location() {
                                                 ))}
                                             </ul>
                                         </Collaps>
+                                        </div>
                                     </div>
                                 </>
 
