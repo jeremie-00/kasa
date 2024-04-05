@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 function Header() {
 
     return <div className="wrapper margin-top-45">
-    <header className='header flexBeteew width-80'>
+    <header className='header flexBetween width-80'>
       <img className='logo' src={logoHeader} alt='logo kasa' />
       <nav className='nav flexRow'>
         <NavLink to="/">Accueil</NavLink>

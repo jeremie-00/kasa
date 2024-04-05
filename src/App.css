@@ -30,7 +30,7 @@ img {
   justify-content: center;
 }
 
-.flexBeteew {
+.flexBetween {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -302,10 +302,6 @@ img {
   margin-top: 30px;
 }
 
-.card {
-  align-items: center;
-}
-
 .titleCard h1 {
   color: #FF6060;
   font-size: 36px;
@@ -317,14 +313,10 @@ img {
   font-weight: 500;
 }
 
-.test {
-  display: flex;
+.location-collaps {
   align-items: start;
-  justify-content: space-between;
-  width: 100%;
 }
-
-.test2 {
+.location-collaps .container-collaps {
   flex-basis: 45%;
 }
 

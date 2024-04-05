@@ -33,7 +33,7 @@ export default function Location() {
                             return (
                                 <>
                                     <SlideShow pictures={pictures} />
-                                    <div className="flexBeteew">
+                                    <div className="flexBetween">
                                         <div className='titleCard'>
                                             <h1>{title}</h1>
                                             <h2>{location}</h2>
@@ -41,7 +41,7 @@ export default function Location() {
                                         <Host name={name} picture={picture} />
                                     </div>
 
-                                    <div className="flexBeteew">
+                                    <div className="flexBetween">
                                         <div className="flexRow gap-20">
                                             {tags.map((txt, index) => (
                                                 <Tag key={index} txt={txt} />
@@ -49,15 +49,15 @@ export default function Location() {
                                         </div>
                                         <Rating rating={rating} />
                                     </div>
-                                    <div className="test">
-                                        <div className="test2">
+                                    <div className="flexBetween location-collaps">
+                                        <div className="containerCollaps">
                                         <Collaps
                                             title="Description"
                                         >
                                             <p >{description}</p>
                                         </Collaps>
                                         </div>
-                                        <div className="test2">
+                                        <div className="container-collaps">
                                         <Collaps
                                             title="Équipements"
                                         >
