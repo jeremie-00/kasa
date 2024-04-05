@@ -73,7 +73,7 @@ img {
   gap: 57px;
 }
 .header .nav a {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .header .active {
   text-decoration: underline;
@@ -186,10 +186,10 @@ img {
   cursor: pointer;
 }
 .slider .arrow_left {
-  left: 10px;
+  left: 15px;
 }
 .slider .arrow_right {
-  right: 10px;
+  right: 15px;
 }
 .slider .numerotation {
   position: absolute;
@@ -234,16 +234,6 @@ img {
   cursor: inherit;
 }
 
-.container-collaps {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border: 1px solid blue;
-  overflow: hidden;
-  max-height: 59px;
-  transition: max-height 1.2s linear;
-}
-
 .collaps {
   display: flex;
   justify-content: space-between;
@@ -265,6 +255,7 @@ img {
 }
 
 .content-collaps {
+  width: 100%;
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
@@ -282,9 +273,11 @@ img {
 .content-collaps .content ul,
 .content-collaps .content p {
   padding: 20px;
+  color: rgb(0, 0, 0);
 }
 .content-collaps .content li {
   margin-bottom: 5px;
+  color: rgb(0, 0, 0);
 }
 
 .home-logements {
@@ -319,7 +312,7 @@ img {
   font-weight: 500;
 }
 .titleCard h2 {
-  color: rgb(133, 131, 131);
+  color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: 500;
 }
@@ -335,7 +328,20 @@ img {
   flex-basis: 45%;
 }
 
-:root {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+.error {
+  color: #FF6060;
+  gap: 139px;
+  margin: 139px;
+}
+.error h1 {
+  font-size: 288px;
+}
+.error p {
+  font-size: 36px;
+}
+.error h2 {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-decoration: underline;
 }/*# sourceMappingURL=App.css.map */

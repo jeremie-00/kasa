@@ -10,8 +10,7 @@ export default function Collaps({ children, title }) {
     }
 
     return (
-        //<div className='container-collaps'>
-            <>
+        <>
             <div className="collaps">
                 <h2>{title}</h2>
                 <img
@@ -21,13 +20,12 @@ export default function Collaps({ children, title }) {
                     onClick={handleToggle}
                 />
             </div>
-            
+
             <div className={active ? 'content-collaps visible' : 'content-collaps hidden'}>
                 <div className='content'>
                     {children}
                 </div>
             </div>
-            </>
-        //</div>
+        </>
     )
 }

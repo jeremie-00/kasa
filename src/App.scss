@@ -16,9 +16,4 @@
 @import './styles/pages/home';
 @import './styles/pages/about';
 @import './styles/pages/location';
-
-:root {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-}
-
+@import './styles/pages/error';
