@@ -586,6 +586,7 @@ img {
   .collaps-card .content-collaps .content p,
   .collaps-about .content-collaps .content ul,
   .collaps-about .content-collaps .content p {
+    padding: 10px;
     font-size: 12px;
   }
   .footer {
