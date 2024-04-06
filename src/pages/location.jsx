@@ -15,7 +15,7 @@ export default function Location() {
     const idUrl = useParams()
 
     return <>
-        <section className="wrapper width-80 margin-50 gap-20">
+        <section className="wrapper width-80 margin-50 gap-20 location-wrapper">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
@@ -56,7 +56,7 @@ export default function Location() {
 
 
 
-                                    <div className="containerCollaps">
+                                    <div className="collaps-card">
                                         <div className="description">
                                             <Collaps title="Description">
                                                 <p>{description}</p>

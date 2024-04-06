@@ -338,14 +338,14 @@ img {
   width: fit-content;
 }
 
-.containerCollaps {
+.collaps-card {
   display: flex;
   gap: 30px;
 }
-.containerCollaps .equipements {
+.collaps-card .equipements {
   flex-basis: 50%;
 }
-.containerCollaps .description {
+.collaps-card .description {
   flex-basis: 50%;
 }
 
@@ -393,22 +393,32 @@ img {
   .header .active {
     text-decoration: underline;
   }
-  .cardContent {
+  .location-wrapper {
+    width: 90%;
+  }
+  .location-wrapper .slider {
+    height: 255px;
+  }
+  .location-wrapper .slider .arrow {
+    width: 12px;
+    height: 20px;
+  }
+  .location-wrapper .cardContent {
     flex-direction: column;
   }
-  .cardContent .title-tags {
+  .location-wrapper .cardContent .title-tags {
     width: 100%;
   }
-  .cardContent .rating-host {
+  .location-wrapper .cardContent .rating-host {
     flex-direction: row;
     width: 100%;
     margin-top: 20px;
     align-items: center;
   }
-  .cardContent .rating-host .host {
+  .location-wrapper .cardContent .rating-host .host {
     order: 1;
   }
-  .containerCollaps {
+  .location-wrapper .collaps-card {
     flex-direction: column;
   }
   .collaps-about {
