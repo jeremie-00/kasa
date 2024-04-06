@@ -393,6 +393,17 @@ img {
   .header .active {
     text-decoration: underline;
   }
+  .banner {
+    height: 111px;
+  }
+  .banner h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    text-shadow: none;
+    font-size: 24px;
+    padding: 15px;
+  }
   .location-wrapper {
     width: 90%;
   }

@@ -25,6 +25,19 @@
         }
     }
 
+    //banner
+    .banner {
+        height: 111px;
+        h1 {
+            display: flex;
+            flex-direction: column;
+            text-align: start; 
+            text-shadow: none;
+            font-size: 24px;
+            padding: 15px;
+          }
+    }
+
     //Page Location
     .location-wrapper {
         width: 90%;

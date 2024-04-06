@@ -13,7 +13,7 @@ export default function Home() {
 
     return <div className="wrapper margin-50 gap-40">
         <Banner cls='home-banner' srcBanner={srcBannerHome}>
-            <h1>Chez vous, partout et ailleurs</h1>
+            <h1>Chez vous, <span>partout et ailleurs</span></h1>
         </Banner>
         <div className="home-logements width-80">
             <Suspense fallback={<Spinner />}>
