@@ -121,18 +121,23 @@ img {
   padding: 30px;
 }
 
-.loader {
-  border: 10px solid grey;
+.contenaire-spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  grid-area: loader;
+  padding: 50px;
+}
+.contenaire-spinner .spinner {
+  border: 10px solid rgba(170, 170, 170, 0.2);
   border-top: 10px solid #FF6060;
   border-radius: 50%;
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
-  margin: 50px;
   margin: auto;
-  grid-area: loader;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -141,6 +146,7 @@ img {
     transform: rotate(360deg);
   }
 }
+
 .tag {
   font-size: 14px;
   font-weight: 700;
@@ -149,6 +155,23 @@ img {
   border: none;
   border-radius: 10px;
   padding: 5px 15px;
+}
+
+.host {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.host h2 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: end;
+  flex-basis: 50%;
+  color: #FF6060;
+}
+.host .imgHost {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
 }
 
 .slider {
@@ -573,5 +596,11 @@ img {
     flex-direction: column;
     font-size: 12px;
     text-align: center;
+  }
+  .loader {
+    border: 5px solid grey;
+    border-top: 5px solid #FF6060;
+    width: 40px;
+    height: 40px;
   }
 }/*# sourceMappingURL=App.css.map */

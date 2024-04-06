@@ -251,4 +251,12 @@
         }
     }
 
+    //loader
+    .loader{
+        border: 5px solid grey;
+        border-top: 5px solid $color_orange;
+        width: 40px;
+        height: 40px;
+    }
+
 }
