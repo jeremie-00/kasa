@@ -1,5 +1,9 @@
 @media (max-width: 767.98px) {
+    .wrapper {
+        margin-top: 20px;
+    }
     .header {
+        width: 90%;
         .logo{
             width: 145px;
         }
@@ -43,6 +47,9 @@
     }
 
     .error {
+        gap: 113px;
+        margin: 113px;
+        
         h1 {
             font-size: 96px;
         }
@@ -60,6 +67,7 @@
     
         h2 {
             font-size: 14px;
+            text-decoration: underline;
         }
     }
 }

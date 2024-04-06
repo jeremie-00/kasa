@@ -373,6 +373,12 @@ img {
 }
 
 @media (max-width: 767.98px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+  .header {
+    width: 90%;
+  }
   .header .logo {
     width: 145px;
   }
@@ -408,6 +414,10 @@ img {
   .collaps-about {
     width: 80%;
   }
+  .error {
+    gap: 113px;
+    margin: 113px;
+  }
   .error h1 {
     font-size: 96px;
   }
@@ -421,5 +431,6 @@ img {
   }
   .error h2 {
     font-size: 14px;
+    text-decoration: underline;
   }
 }/*# sourceMappingURL=App.css.map */
