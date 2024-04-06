@@ -249,71 +249,69 @@ img {
   cursor: inherit;
 }
 
-.collaps {
+.container-collaps {
+  width: 100%;
+}
+.container-collaps .collaps {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   background-color: #FF6060;
   border-radius: 5px;
   padding: 15px 20px;
 }
-.collaps .arrow {
+.container-collaps .collaps .arrow {
   cursor: pointer;
   width: 24px;
   height: 15px;
   transition: transform 0.4s linear;
 }
-.collaps .rotate {
+.container-collaps .collaps .rotate {
   transform: rotate(-180deg);
   transition: transform 0.4s linear;
 }
-
-.content-collaps {
-  width: 100%;
+.container-collaps .content-collaps {
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
   transition: grid-template-rows 0.4s linear;
 }
-.content-collaps.visible {
+.container-collaps .content-collaps.visible {
   visibility: visible;
   grid-template-rows: 1fr;
 }
-.content-collaps .content {
+.container-collaps .content-collaps .content {
   align-self: end;
   min-height: 0;
   transition: visibility 1s;
 }
-.content-collaps .content ul,
-.content-collaps .content p {
+.container-collaps .content-collaps .content ul,
+.container-collaps .content-collaps .content p {
   padding: 20px;
   color: rgb(0, 0, 0);
 }
-.content-collaps .content li {
+.container-collaps .content-collaps .content li {
   margin-bottom: 5px;
   color: rgb(0, 0, 0);
 }
 
 .home-logements {
   background-color: #f6f6f6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "v loader";
-  gap: 40px 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 50px;
   padding: 55px;
   border-radius: 10px;
 }
 
 .about {
   margin: 38px;
+  gap: 40px;
 }
 .about .wrapper {
   margin: 0;
-}
-
-.collaps-about .collaps {
-  margin-top: 30px;
+  gap: 40px;
 }
 
 .cardContent {
@@ -545,7 +543,12 @@ img {
     height: 30px;
     margin-top: 0px;
   }
-  .collaps-about {
+  .about {
+    gap: 20px;
+    margin: 19px;
+  }
+  .about .wrapper {
+    gap: 20px;
     width: auto;
     padding: 0 20px;
   }
@@ -571,7 +574,6 @@ img {
   .collaps-card .collaps,
   .collaps-about .collaps {
     height: 30px;
-    margin-top: 19px;
   }
   .collaps-card .collaps h2,
   .collaps-about .collaps h2 {
