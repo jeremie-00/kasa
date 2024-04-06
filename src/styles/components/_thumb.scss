@@ -1,17 +1,17 @@
-.containerCard {
+.containerThumb {
     display: block;
     width: 340px;
     height: 340px;
     border-radius: 10px;
 
-    .contentCard {
+    .contentThumb {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
         position: relative;
     
-        .imgCard {
+        .imgThumb {
             width: 100%;
             height: 100%; 
             border-radius: 10px;

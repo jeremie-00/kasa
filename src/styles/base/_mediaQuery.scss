@@ -28,26 +28,88 @@
     //banner
     .banner {
         height: 111px;
+        width: auto;
+        margin: 0 20px;
+
         h1 {
             display: flex;
             flex-direction: column;
-            text-align: start; 
+            text-align: start;
             text-shadow: none;
             font-size: 24px;
             padding: 15px;
-          }
+        }
     }
+
+    //Pages Home
+    .home-wrap {
+        margin: 27px;
+        gap: 22px;
+        .home-logements {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 22px;
+            padding: 0 20px;
+
+            //Thumb
+            .containerThumb {
+                display: block;
+                width: 100%;
+                height: 255px;
+                border-radius: 10px;
+
+                .contentThumb {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    .imgThumb {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        background: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, .5));
+                    }
+
+                    h2 {
+                        position: absolute;
+                        font-size: 18px;
+                        bottom: 0;
+                        border-radius: 10px;
+                        padding: 20px;
+                        color: white;
+                        cursor: inherit;
+                    }
+                }
+            }
+        }
+    }
+
 
     //Page Location
     .location-wrapper {
         width: 90%;
+
         .slider {
             height: 255px;
+
             .arrow {
                 width: 12px;
                 height: 20px;
             }
         }
+
         .cardContent {
             flex-direction: column;
 
