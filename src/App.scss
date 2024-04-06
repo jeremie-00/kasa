@@ -8,7 +8,7 @@
 @import './styles/components/spinner';
 
 @import './styles/components/tag';
-@import './styles/components/host';
+//@import './styles/components/host';
 @import './styles/components/slideshow';
 @import './styles/components/thumb';
 @import './styles/components/collaps';
@@ -17,3 +17,5 @@
 @import './styles/pages/about';
 @import './styles/pages/location';
 @import './styles/pages/error';
+
+@import './styles/base/mediaQuery';

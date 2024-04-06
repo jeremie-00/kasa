@@ -149,23 +149,6 @@ img {
   padding: 5px 15px;
 }
 
-.host {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.host h2 {
-  font-size: 18px;
-  font-weight: 500;
-  text-align: end;
-  flex-basis: 50%;
-  color: #FF6060;
-}
-.host .imgHost {
-  border-radius: 100%;
-  width: 64px;
-  height: 64px;
-}
-
 .slider {
   width: 100%;
   height: 415px;
@@ -302,22 +285,68 @@ img {
   margin-top: 30px;
 }
 
-.titleCard h1 {
+.cardContent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.cardContent .title-tags {
+  width: 90%;
+}
+.cardContent .title-tags h1 {
   color: #FF6060;
   font-size: 36px;
   font-weight: 500;
 }
-.titleCard h2 {
+.cardContent .title-tags h2 {
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: 500;
+  margin-top: 5px;
+}
+.cardContent .title-tags .tags {
+  margin-top: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.cardContent .rating-host {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cardContent .rating-host .host {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.cardContent .rating-host .host h2 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: end;
+  flex-basis: 50%;
+  color: #FF6060;
+}
+.cardContent .rating-host .host .imgHost {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+}
+.cardContent .rating-host .rating {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.location-collaps {
-  align-items: start;
+.containerCollaps {
+  display: flex;
+  gap: 30px;
 }
-.location-collaps .container-collaps {
-  flex-basis: 45%;
+.containerCollaps .equipements {
+  flex-basis: 50%;
+}
+.containerCollaps .description {
+  flex-basis: 50%;
 }
 
 .error {
@@ -336,4 +365,39 @@ img {
   color: rgb(0, 0, 0);
   font-weight: 500;
   text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .header .logo {
+    width: 145px;
+  }
+  .header .nav {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  .header .nav a {
+    font-size: 12px;
+  }
+  .header .active {
+    text-decoration: underline;
+  }
+  .cardContent {
+    flex-direction: column;
+  }
+  .cardContent .title-tags {
+    width: 100%;
+  }
+  .cardContent .rating-host {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+  }
+  .cardContent .rating-host .host {
+    order: 1;
+  }
+  .containerCollaps {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=App.css.map */
