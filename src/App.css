@@ -565,4 +565,13 @@ img {
   .collaps-about .content-collaps .content p {
     font-size: 12px;
   }
+  .footer {
+    gap: 15px;
+  }
+  .footer .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=App.css.map */

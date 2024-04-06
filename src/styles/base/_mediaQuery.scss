@@ -240,4 +240,15 @@
 
     }
 
+    //footer
+    .footer {
+        gap: 15px;
+        .text {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
 }
