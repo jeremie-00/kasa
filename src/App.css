@@ -357,8 +357,13 @@ img {
 .error h1 {
   font-size: 288px;
 }
-.error p {
+.error div {
+  padding: 20px;
+}
+.error div,
+.error span {
   font-size: 36px;
+  text-align: center;
 }
 .error h2 {
   font-size: 18px;
@@ -399,5 +404,22 @@ img {
   }
   .containerCollaps {
     flex-direction: column;
+  }
+  .collaps-about {
+    width: 80%;
+  }
+  .error h1 {
+    font-size: 96px;
+  }
+  .error div {
+    display: flex;
+    flex-direction: column;
+  }
+  .error div,
+  .error span {
+    font-size: 18px;
+  }
+  .error h2 {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=App.css.map */

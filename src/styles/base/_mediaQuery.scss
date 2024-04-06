@@ -37,4 +37,29 @@
     .containerCollaps {
         flex-direction: column;
     }
+
+    .collaps-about {
+        width: 80%;
+    }
+
+    .error {
+        h1 {
+            font-size: 96px;
+        }
+    
+
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        div,
+        span {
+            font-size: 18px;
+        }
+    
+        h2 {
+            font-size: 14px;
+        }
+    }
 }
