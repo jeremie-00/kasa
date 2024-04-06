@@ -45,6 +45,7 @@
     .home-wrap {
         margin: 27px;
         gap: 22px;
+
         .home-logements {
             background-color: transparent;
             display: flex;
@@ -97,10 +98,12 @@
         }
     }
 
-
     //Page Location
     .location-wrapper {
-        width: 90%;
+        width: 100%;
+        padding: 27px 20px;
+        margin: 0;
+        gap: 10px;
 
         .slider {
             height: 255px;
@@ -113,19 +116,51 @@
 
         .cardContent {
             flex-direction: column;
+            gap: 15px;
 
             .title-tags {
                 width: 100%;
+
+                h1 {
+                    font-size: 18px;
+                }
+
+                h2 {
+                    font-size: 14px;
+                }
+
+                .tags {
+                    margin-top: 10px;
+                    gap: 10px;
+
+                    .tag {
+                        font-size: 10px;
+                        border-radius: 5px;
+                    }
+
+                }
             }
 
             .rating-host {
                 flex-direction: row;
                 width: 100%;
-                margin-top: 20px;
                 align-items: center;
 
                 .host {
                     order: 1;
+
+                    h2 {
+                        font-size: 12px;
+                    }
+
+                    .imgHost {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                .star {
+                    width: 14px;
                 }
             }
 
@@ -133,14 +168,19 @@
 
         .collaps-card {
             flex-direction: column;
+            gap: 20px;
+
+            .collaps {
+                height: 30px;
+                margin-top: 0px;
+            }
         }
     }
 
-
-
     //Page About
     .collaps-about {
-        width: 80%;
+        width: auto;
+        padding: 0 20px;
     }
 
     //Page error
@@ -168,4 +208,36 @@
             text-decoration: underline;
         }
     }
+
+    //collaps
+    .collaps-card,
+    .collaps-about {
+        .collaps {
+            height: 30px;
+            margin-top: 19px;
+
+            h2 {
+                font-size: 13px;
+            }
+
+            .arrow {
+                width: 16px;
+                height: 10px;
+            }
+        }
+
+        .content-collaps {
+
+            .content {
+
+                ul,
+                p {
+                    font-size: 12px;
+                }
+
+            }
+        }
+
+    }
+
 }

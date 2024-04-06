@@ -6,6 +6,8 @@
     height: 80px;
     animation: spin 1s linear infinite;
     margin: 50px;
+    margin: auto;
+    grid-area: loader;
   }
 
   @keyframes spin {

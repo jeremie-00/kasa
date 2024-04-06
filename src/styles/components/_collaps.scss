@@ -11,12 +11,12 @@
         cursor: pointer;
         width: 24px;
         height: 15px;
-        transition: transform 1.2s linear;
+        transition: transform .4s linear;
     }
 
     .rotate {
         transform: rotate(-180deg);
-        transition: transform 1.2s linear;
+        transition: transform .4s linear;
     }
 }
 
@@ -25,7 +25,7 @@
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
-    transition: grid-template-rows 1s;
+    transition: grid-template-rows .4s linear;
 
     &.visible {
         visibility: visible;

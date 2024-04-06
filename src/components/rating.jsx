@@ -9,7 +9,7 @@ export default function Rating({rating}) {
         for (let i = 1; i <= maxStars; i++) {
            stars.push(
               <img 
-                 className='stars' 
+                 className='star' 
                  key={i} 
                  src={i <= rating ? StarActive : StarInactive} 
                  alt={i <= rating ? "star-filled" : "star-empty"} 

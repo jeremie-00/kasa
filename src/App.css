@@ -129,6 +129,8 @@ img {
   height: 80px;
   animation: spin 1s linear infinite;
   margin: 50px;
+  margin: auto;
+  grid-area: loader;
 }
 
 @keyframes spin {
@@ -237,11 +239,11 @@ img {
   cursor: pointer;
   width: 24px;
   height: 15px;
-  transition: transform 1.2s linear;
+  transition: transform 0.4s linear;
 }
 .collaps .rotate {
   transform: rotate(-180deg);
-  transition: transform 1.2s linear;
+  transition: transform 0.4s linear;
 }
 
 .content-collaps {
@@ -249,7 +251,7 @@ img {
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
-  transition: grid-template-rows 1s;
+  transition: grid-template-rows 0.4s linear;
 }
 .content-collaps.visible {
   visibility: visible;
@@ -274,10 +276,10 @@ img {
   background-color: #f6f6f6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "v loader";
   gap: 40px 55px;
   padding: 55px;
-  align-items: center;
-  justify-content: center;
+  border-radius: 10px;
 }
 
 .about {
@@ -461,7 +463,10 @@ img {
     cursor: inherit;
   }
   .location-wrapper {
-    width: 90%;
+    width: 100%;
+    padding: 27px 20px;
+    margin: 0;
+    gap: 10px;
   }
   .location-wrapper .slider {
     height: 255px;
@@ -472,24 +477,54 @@ img {
   }
   .location-wrapper .cardContent {
     flex-direction: column;
+    gap: 15px;
   }
   .location-wrapper .cardContent .title-tags {
     width: 100%;
   }
+  .location-wrapper .cardContent .title-tags h1 {
+    font-size: 18px;
+  }
+  .location-wrapper .cardContent .title-tags h2 {
+    font-size: 14px;
+  }
+  .location-wrapper .cardContent .title-tags .tags {
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .location-wrapper .cardContent .title-tags .tags .tag {
+    font-size: 10px;
+    border-radius: 5px;
+  }
   .location-wrapper .cardContent .rating-host {
     flex-direction: row;
     width: 100%;
-    margin-top: 20px;
     align-items: center;
   }
   .location-wrapper .cardContent .rating-host .host {
     order: 1;
   }
+  .location-wrapper .cardContent .rating-host .host h2 {
+    font-size: 12px;
+  }
+  .location-wrapper .cardContent .rating-host .host .imgHost {
+    width: 32px;
+    height: 32px;
+  }
+  .location-wrapper .cardContent .rating-host .star {
+    width: 14px;
+  }
   .location-wrapper .collaps-card {
     flex-direction: column;
+    gap: 20px;
+  }
+  .location-wrapper .collaps-card .collaps {
+    height: 30px;
+    margin-top: 0px;
   }
   .collaps-about {
-    width: 80%;
+    width: auto;
+    padding: 0 20px;
   }
   .error {
     gap: 113px;
@@ -509,5 +544,25 @@ img {
   .error h2 {
     font-size: 14px;
     text-decoration: underline;
+  }
+  .collaps-card .collaps,
+  .collaps-about .collaps {
+    height: 30px;
+    margin-top: 19px;
+  }
+  .collaps-card .collaps h2,
+  .collaps-about .collaps h2 {
+    font-size: 13px;
+  }
+  .collaps-card .collaps .arrow,
+  .collaps-about .collaps .arrow {
+    width: 16px;
+    height: 10px;
+  }
+  .collaps-card .content-collaps .content ul,
+  .collaps-card .content-collaps .content p,
+  .collaps-about .content-collaps .content ul,
+  .collaps-about .content-collaps .content p {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=App.css.map */
