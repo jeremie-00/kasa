@@ -7,8 +7,6 @@ import Home from "@pages/home";
 import About from "@pages/about";
 import Location from "@pages/location";
 
-import Spinner from "@components/spinner";
-
 function Router() {
 
     const router = createBrowserRouter([
@@ -44,7 +42,7 @@ function Router() {
                     }
 
                 },
-                
+                               
             ]
         }
     ])

@@ -4,6 +4,7 @@
     @extend .gap-40;
 
     .home-logements {
+        @include set-size(100%, 100%);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         background-color: $bg_bleu_clair;
