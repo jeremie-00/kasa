@@ -6,9 +6,9 @@ export default function Thumb({ id, title, cover }) {
         throw new Error(`Composant Thumb : Propriétés manquantes - id: ${id}, txt: ${title}, cover: ${cover}`);
     }
     return (
-        <NavLink className='containerCard' to={`/location/${id}`} key={id}>
-            <article className='contentCard'>
-                <img className='imgCard' src={cover} alt='Photo' />
+        <NavLink className='containerThumb' to={`/location/${id}`} key={id}>
+            <article className='contentThumb'>
+                <img className='imgThumb' src={cover} alt='Photo' />
                 <div className='overlay'></div>
                 <h2>{title}</h2>
             </article>

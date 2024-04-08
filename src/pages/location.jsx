@@ -15,7 +15,7 @@ export default function Location() {
     const idUrl = useParams()
 
     return <>
-        <div className="wrapper width-80 margin-50 gap-20">
+        <section className="wrapper width-80 margin-50 gap-20 location-wrapper">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
@@ -24,49 +24,52 @@ export default function Location() {
                         const { equipments, description, tags, rating, title, location, pictures } = locationData
                         const { name, picture } = locationData.host
 
-                        console.log(pictures.length)
-
-                        const cles = Object.keys(locationData);
-                        //console.log(cles)
-
                         if (locationData) {
                             return (
                                 <>
                                     <SlideShow pictures={pictures} />
-                                    <div className="flexBetween">
-                                        <div className='titleCard'>
+                                    
+                                    <div className="cardContent">
+                                        
+                                        <div className='title-tags'>
                                             <h1>{title}</h1>
                                             <h2>{location}</h2>
-                                        </div>
-                                        <Host name={name} picture={picture} />
-                                    </div>
-
-                                    <div className="flexBetween">
-                                        <div className="flexRow gap-20">
+                                            <div className="tags flexRow gap-20">
                                             {tags.map((txt, index) => (
                                                 <Tag key={index} txt={txt} />
                                             ))}
                                         </div>
-                                        <Rating rating={rating} />
-                                    </div>
-                                    <div className="flexBetween location-collaps">
-                                        <div className="container-collaps">
-                                        <Collaps
-                                            title="Description"
-                                        >
-                                            <p >{description}</p>
-                                        </Collaps>
                                         </div>
-                                        <div className="container-collaps">
-                                        <Collaps
-                                            title="Équipements"
-                                        >
-                                            <ul>
-                                                {equipments.map((txt, index) => (
-                                                    <li key={index}>{txt}</li>
-                                                ))}
-                                            </ul>
-                                        </Collaps>
+
+                                        <div className="rating-host">
+                                            <div className="host flexRow gap-20">
+                                                <Host name={name} picture={picture} />
+                                            </div>
+                                            <div className='rating'>
+                                                <Rating rating={rating} />
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    
+
+
+
+                                    <div className="collaps-card">
+                                        <div className="description">
+                                            <Collaps title="Description">
+                                                <p>{description}</p>
+                                            </Collaps>
+                                        </div>
+                                        <div className="equipements">
+                                            <Collaps title="Équipements" >
+                                                <ul>
+                                                    {equipments.map((txt, index) => (
+                                                        <li key={index}>{txt}</li>
+                                                    ))}
+                                                </ul>
+                                            </Collaps>
                                         </div>
                                     </div>
                                 </>
@@ -78,6 +81,6 @@ export default function Location() {
                     }}
                 </Await>
             </Suspense>
-        </div>
+        </section>
     </>
 }

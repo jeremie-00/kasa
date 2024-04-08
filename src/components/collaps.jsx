@@ -10,7 +10,7 @@ export default function Collaps({ children, title }) {
     }
 
     return (
-        <>
+        <div className="container-collaps">
             <div className="collaps">
                 <h2>{title}</h2>
                 <img
@@ -26,6 +26,6 @@ export default function Collaps({ children, title }) {
                     {children}
                 </div>
             </div>
-        </>
+        </div>
     )
 }

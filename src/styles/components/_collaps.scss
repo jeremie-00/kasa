@@ -1,52 +1,54 @@
-.collaps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container-collaps {
     width: 100%;
-    background-color: $color_orange;
-    border-radius: 5px;
-    padding: 15px 20px;
+    
+    .collaps {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color_orange;
+        border-radius: 5px;
+        padding: 15px 20px;
 
-    .arrow {
-        cursor: pointer;
-        width: 24px;
-        height: 15px;
-        transition: transform 1.2s linear;
-    }
-
-    .rotate {
-        transform: rotate(-180deg);
-        transition: transform 1.2s linear;
-    }
-}
-
-.content-collaps {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 0fr;
-    overflow: hidden;
-    transition: grid-template-rows 1s;
-
-    &.visible {
-        visibility: visible;
-        grid-template-rows: 1fr;
-    }
-
-    .content {
-        align-self: end;
-        min-height: 0;
-        transition: visibility 1s;
-
-        ul,
-        p {
-            padding: 20px;
-            color: $txt_color_black;
+        .arrow {
+            cursor: pointer;
+            width: 24px;
+            height: 15px;
+            transition: transform .4s linear;
         }
 
-        li {
-            margin-bottom: 5px;
-            color: $txt_color_black;
+        .rotate {
+            transform: rotate(-180deg);
+            transition: transform .4s linear;
         }
     }
 
+    .content-collaps {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows .4s linear;
+
+        &.visible {
+            visibility: visible;
+            grid-template-rows: 1fr;
+        }
+
+        .content {
+            align-self: end;
+            min-height: 0;
+            transition: visibility 1s;
+
+            ul,
+            p {
+                padding: 20px;
+                color: $txt_color_black;
+            }
+
+            li {
+                margin-bottom: 5px;
+                color: $txt_color_black;
+            }
+        }
+
+    }
 }

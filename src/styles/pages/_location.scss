@@ -1,18 +1,79 @@
-.titleCard {
-    h1{
-        color: $color_orange;
-        font-size: 36px;
-        font-weight: $font_medium;
+.cardContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .title-tags {
+        width: 90%;
+
+        h1 {
+            color: $color_orange;
+            font-size: 36px;
+            font-weight: $font_medium;
+        }
+
+        h2 {
+            color: $txt_color_black;
+            font-size: 18px;
+            font-weight: $font_medium;
+            margin-top: 5px;
+        }
+        .tags {
+            margin-top: 20px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
     }
-    h2{
-        color: $txt_color_black;
-        font-size: 18px;
-        font-weight: $font_medium;
+
+
+    
+
+
+    .rating-host {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 40%;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .host {
+            width: -moz-fit-content;
+            width: fit-content;
+
+            h2 {
+                font-size: 18px;
+                font-weight: $font_medium;
+                text-align: end;
+                flex-basis: 50%;
+                color: $color_orange;
+            }
+
+            .imgHost {
+                border-radius: 100%;
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .rating {
+            width: -moz-fit-content;
+            width: fit-content;
+        }
     }
+
 }
-.location-collaps {
-    align-items: start;
-    .container-collaps {
-        flex-basis: 45%;
+
+.collaps-card {
+    display: flex;
+    gap: 30px;
+
+    .equipements {
+        flex-basis: 50%;
     }
+
+    .description {
+        flex-basis: 50%;
+    }
+
 }

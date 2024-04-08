@@ -1,30 +1,39 @@
-.containerCard {
+.containerThumb {
     display: block;
-    width: 340px;
+    max-width: 340px;
+    width: 100%;
     height: 340px;
     border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
 
-    .contentCard {
+    .contentThumb {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
         position: relative;
-    
-        .imgCard {
+
+        .imgThumb {
             width: 100%;
-            height: 100%; 
+            height: 100%;
             border-radius: 10px;
         }
+
         .overlay {
             position: absolute;
             width: 100%;
             height: 100%;
             border-radius: 10px;
-            background: linear-gradient(to bottom,transparent,transparent,rgba(0,0,0,.5));
+            background: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, .5));
         }
+
         h2 {
+            -webkit-hyphens: auto;
+            hyphens: auto;
+            overflow-wrap: break-word;
             position: absolute;
+            width: 100%;
             font-size: 18px;
             bottom: 0;
             border-radius: 10px;
@@ -34,4 +43,3 @@
         }
     }
 }
-
