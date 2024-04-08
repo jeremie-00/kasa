@@ -11,11 +11,11 @@ export default function Home() {
     //recupere une promise
     const { data } = useLoaderData()
 
-    return <div className="wrapper margin-50 gap-40 home-wrap">
+    return <div className="home-wrapper">
         <Banner cls='home-banner' srcBanner={srcBannerHome}>
             <h1>Chez vous, <span>partout et ailleurs</span></h1>
         </Banner>
-        <div className="home-logements width-80">
+        <div className="home-logements">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => (

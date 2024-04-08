@@ -1,14 +1,12 @@
 .slider {
-    width: 100%;
-    height: 415px;
+    @extend .flexRow;
+    @include set-size(100%, 415px);
     position: relative;
     border-radius: 25px;
-    overflow: hidden;
 
     .slide-img {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        @include set-size(100%, 100%);
         object-fit: cover;
         object-position: center;
         border-radius: 25px;

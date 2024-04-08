@@ -15,7 +15,7 @@ export default function Location() {
     const idUrl = useParams()
 
     return <>
-        <section className="wrapper width-80 margin-50 gap-20 location-wrapper">
+        <section className="location-wrapper">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => {
@@ -34,7 +34,7 @@ export default function Location() {
                                         <div className='title-tags'>
                                             <h1>{title}</h1>
                                             <h2>{location}</h2>
-                                            <div className="tags flexRow gap-20">
+                                            <div className="tags">
                                             {tags.map((txt, index) => (
                                                 <Tag key={index} txt={txt} />
                                             ))}
@@ -42,7 +42,7 @@ export default function Location() {
                                         </div>
 
                                         <div className="rating-host">
-                                            <div className="host flexRow gap-20">
+                                            <div className="host">
                                                 <Host name={name} picture={picture} />
                                             </div>
                                             <div className='rating'>

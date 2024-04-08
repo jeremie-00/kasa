@@ -1,4 +1,5 @@
 .error {
+    @extend .wrapper;
     color: $color-orange;
     gap: 139px;
     margin: 139px;

@@ -1,79 +1,79 @@
-.cardContent {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.location-wrapper {
+    @extend .wrapper;
+    @extend .width-80;
+    @extend .gap-20;
+    @extend .margin-50;
 
-    .title-tags {
-        width: 90%;
+    .cardContent {
+        @include set-size(100%, 100%);
+        @include flex($direction: row, $justify: unset, $align: unset);
 
-        h1 {
-            color: $color_orange;
-            font-size: 36px;
-            font-weight: $font_medium;
-        }
+        .title-tags {
+            width: 90%;
 
-        h2 {
-            color: $txt_color_black;
-            font-size: 18px;
-            font-weight: $font_medium;
-            margin-top: 5px;
-        }
-        .tags {
-            margin-top: 20px;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-        }
-    }
-
-
-    
-
-
-    .rating-host {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 40%;
-        align-items: flex-end;
-        justify-content: space-between;
-
-        .host {
-            width: -moz-fit-content;
-            width: fit-content;
+            h1 {
+                color: $color_orange;
+                font-size: 36px;
+                font-weight: $font_medium;
+            }
 
             h2 {
+                color: $txt_color_black;
                 font-size: 18px;
                 font-weight: $font_medium;
-                text-align: end;
-                flex-basis: 50%;
-                color: $color_orange;
+                margin-top: 5px;
             }
 
-            .imgHost {
-                border-radius: 100%;
-                width: 64px;
-                height: 64px;
+            .tags {
+                @extend .flexRow;
+                @extend .gap-20;
+                margin-top: 20px;
+                justify-content: flex-start;
+                flex-wrap: wrap;
             }
         }
 
-        .rating {
-            width: -moz-fit-content;
-            width: fit-content;
+        .rating-host {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 20px;
+            width: 40%;
+
+            .host {
+                @extend .flexRow;
+                @extend .gap-20;
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: $font_medium;
+                    text-align: end;
+                    flex-basis: 50%;
+                    color: $color_orange;
+                }
+
+                .imgHost {
+                    border-radius: 100%;
+                    width: 64px;
+                    height: 64px;
+                }
+            }
         }
+
     }
 
-}
+    .collaps-card {
+        display: flex;
+        gap: 30px;
 
-.collaps-card {
-    display: flex;
-    gap: 30px;
+        .equipements {
+            flex-basis: 50%;
+        }
 
-    .equipements {
-        flex-basis: 50%;
+        .description {
+            flex-basis: 50%;
+        }
+
     }
-
-    .description {
-        flex-basis: 50%;
-    }
-
 }

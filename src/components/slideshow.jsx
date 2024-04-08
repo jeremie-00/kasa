@@ -17,17 +17,17 @@ export default function SlideShow({ pictures }) {
         setActiveIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1))
     }
 
-    return <div className='slider flexRow' >
+    return <div className='slider' >
 
-            {pictures.map((picture, index) => (
-                <img
-                    key={index}
-                    className= {`slide-img ${index === activeIndex ? `active` : ``}`}
-                    src={picture}
-                    alt={`image ${index}`}
-                />
-            ))}
-            
+        {pictures.map((picture, index) => (
+            <img
+                key={index}
+                className={`slide-img ${index === activeIndex ? `active` : ``}`}
+                src={picture}
+                alt={`image ${index}`}
+            />
+        ))}
+
         <img className={pictures.length <= 1 ? 'hidden' : 'arrow arrow_left'} src={arrowLeft} alt="arrow left" onClick={handlePrev} />
         <img className={pictures.length <= 1 ? 'hidden' : 'arrow arrow_right'} src={arrowRight} alt="arrow right" onClick={handleNext} />
         <span className={pictures.length <= 1 ? 'hidden' : 'numerotation'} >{activeIndex + 1}/{pictures.length}</span>

@@ -1,20 +1,15 @@
-.home-logements {
-    background-color: $bg_bleu_clair;
-    display: flex;
-    flex-wrap: wrap;
-    //align-items: center;
-    justify-content: center;
-    gap: 40px 50px;
-    padding: 55px;
-    border-radius: 10px;
-}
+.home-wrapper {
+    @extend .wrapper;
+    @extend .margin-50;
+    @extend .gap-40;
 
-// .home-logements {
-//     background-color: $bg_bleu_clair;
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-areas: "v loader";
-//     gap: 40px 55px;
-//     padding: 55px;
-//     border-radius: 10px;
-// }
+    .home-logements {
+        @extend .width-80;
+        @extend .flexRow;
+        flex-wrap: wrap;
+        background-color: $bg_bleu_clair;
+        gap: 40px 50px;
+        padding: 55px;
+        border-radius: 10px;
+    }
+}

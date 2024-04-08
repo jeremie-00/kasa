@@ -1,8 +1,6 @@
 #root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  @include set-size(100%, 100%);
+  @include flex($direction: column, $justify: unset, $align: center);
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   color: white;
 }
@@ -12,24 +10,21 @@ img {
 }
 
 .flexRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex($direction: row, $justify: center, $align: center);
+}
+
+.flexColumn {
+  @include flex($direction: column, $justify: center, $align: center);
 }
 
 .flexBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  @include set-size(100%, 100%);
+  @include flex($direction: row, $justify: space-between, $align: center);
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  @include set-size(100%, 100%);
+  @include flex($direction: column, $justify: center, $align: center);
 }
 
 .width-80 {

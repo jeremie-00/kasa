@@ -1,9 +1,12 @@
 .about {
+    @extend .wrapper;
     margin: 38px;
     gap: 40px;
-    .wrapper {
+
+    .collaps-about {
+        @extend .wrapper;
+        @extend .width-70;
         margin: 0;
         gap: 40px;
     }
 }
-

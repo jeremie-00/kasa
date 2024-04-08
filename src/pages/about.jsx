@@ -10,9 +10,9 @@ import srcBannerAbout from '@assets/banner_about.png';
 export default function About() {
     const { data } = useLoaderData()
 
-    return <div className="wrapper about">
+    return <div className="about">
         <Banner cls='about-banner' srcBanner={srcBannerAbout} />
-        <div className="wrapper width-70 collaps-about">
+        <div className="collaps-about">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
                     {(data) => (

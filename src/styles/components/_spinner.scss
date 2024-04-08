@@ -1,17 +1,13 @@
 .contenaire-spinner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  grid-area: loader;
+  @include set-size( 100%,  100%);
+  @include flex($direction: row, $justify: unset, $align: center);
   padding: 50px;
 
   .spinner {
-    border: 10px solid rgba(170, 170, 170, 0.2);
+    @include set-size( 80px,  80px);
+    border: 10px solid $bg_spinner;
     border-top: 10px solid $color_orange;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
     animation: spin 1s linear infinite;
     margin: auto;
   }
