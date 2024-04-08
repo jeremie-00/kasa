@@ -26,7 +26,7 @@ img {
      object-fit: cover;
 }
 
-.flexRow, .location-wrapper .cardContent .rating-host .host, .location-wrapper .cardContent .title-tags .tags, .home-wrapper .home-logements, .containerThumb .contentThumb, .slider, .wrapper-header .header .nav {
+.flexRow, .location-wrapper .cardContent .rating-host .host, .location-wrapper .cardContent .title-tags .tags, .containerThumb .contentThumb, .slider, .wrapper-header .header .nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,7 +56,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1440px;
+  max-width: 1240px;
 }
 
 .width-80, .about .collaps-about {
@@ -228,11 +228,9 @@ img {
 
 .containerThumb {
   display: block;
-  max-width: 340px;
   width: 100%;
   height: 340px;
   border-radius: 10px;
-  margin: auto;
 }
 .containerThumb .contentThumb {
   width: 100%;
@@ -309,11 +307,17 @@ img {
 }
 
 .home-wrapper .home-logements {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: #f6f6f6;
-  gap: 40px 50px;
-  padding: 55px;
+  gap: 40px;
+  padding: 40px;
   border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .home-wrapper .home-logements {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .about {

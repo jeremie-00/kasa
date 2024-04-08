@@ -1,9 +1,7 @@
 .containerThumb {
     display: block;
-    max-width: 340px;
     @include set-size(100%, 340px);
     border-radius: 10px;
-    margin: auto;
 
     .contentThumb {
         @extend .flexRow;
