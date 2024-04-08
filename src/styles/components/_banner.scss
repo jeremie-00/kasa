@@ -1,6 +1,5 @@
 .banner {
-    @extend .width-80;
-    height: 223px;
+    @include set-size(100%, 223px);
     display: flex;
     border-radius: 10px;
     position: relative;

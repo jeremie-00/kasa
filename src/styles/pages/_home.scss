@@ -4,7 +4,6 @@
     @extend .gap-40;
 
     .home-logements {
-        @extend .width-80;
         @extend .flexRow;
         flex-wrap: wrap;
         background-color: $bg_bleu_clair;

@@ -1,5 +1,10 @@
-.header {
+.wrapper-header {
+  @extend .wrapper;
+  margin-top: 45px;
+  .header {
+    @extend .flexBetween;
     .nav {
+      @extend .flexRow;
       gap: 57px;
       a {
         color: $txt_color_black;
@@ -9,3 +14,5 @@
       text-decoration: underline;
     }
   }
+}
+

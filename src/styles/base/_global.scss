@@ -23,8 +23,9 @@ img {
 }
 
 .wrapper {
-  @include set-size(100%, 100%);
+  @include set-size(90%, 100%);
   @include flex($direction: column, $justify: center, $align: center);
+  max-width: 1440px;
 }
 
 .width-80 {
