@@ -103,6 +103,9 @@
             .arrow {
                 @include set-size( 12px, 20px);
             }
+            .numerotation {
+                display: none;
+            }
         }
 
         .cardContent {

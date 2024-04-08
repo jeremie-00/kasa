@@ -503,6 +503,9 @@ img {
     width: 12px;
     height: 20px;
   }
+  .location-wrapper .slider .numerotation {
+    display: none;
+  }
   .location-wrapper .cardContent {
     flex-direction: column;
     gap: 15px;
