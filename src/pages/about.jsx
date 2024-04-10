@@ -24,6 +24,7 @@ export default function About() {
                             >
                                 <p >{d.text}</p>
                             </ Collaps>
+                            
                         ))
                     )}
                 </Await>

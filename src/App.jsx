@@ -4,9 +4,7 @@ import './App.scss'
 
 import Router from "@roots/router";
 
-function App() {
+export default function App() {
   const router = Router()
   return <RouterProvider router={router} />
 }
-
-export default App;

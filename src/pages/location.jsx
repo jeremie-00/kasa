@@ -10,7 +10,6 @@ import Host from "@components/host";
 import SlideShow from "@components/slideshow";
 
 export default function Location() {
-    //recupere une promise
     const { data } = useLoaderData()
     const idUrl = useParams()
 
@@ -28,17 +27,18 @@ export default function Location() {
                             return (
                                 <>
                                     <SlideShow pictures={pictures} />
-                                    
+
                                     <div className="cardContent">
-                                        
+
                                         <div className='title-tags'>
                                             <h1>{title}</h1>
                                             <h2>{location}</h2>
                                             <div className="tags">
-                                            {tags.map((txt, index) => (
-                                                <Tag key={index} txt={txt} />
-                                            ))}
-                                        </div>
+                                                {tags.map((txt, index) => (
+                                                    <Tag key={index} txt={txt} />
+                                                ))}
+                                            </div>
+
                                         </div>
 
                                         <div className="rating-host">
@@ -50,11 +50,7 @@ export default function Location() {
                                             </div>
                                         </div>
 
-
                                     </div>
-                                    
-
-
 
                                     <div className="collaps-card">
                                         <div className="description">
@@ -74,9 +70,9 @@ export default function Location() {
                                     </div>
                                 </>
 
-                            );
+                            )
                         } else {
-                            return null;
+                            return null
                         }
                     }}
                 </Await>

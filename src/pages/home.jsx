@@ -8,7 +8,6 @@ import Thumb from "@components/thumb"
 import srcBannerHome from '@assets/banner_home.png';
 
 export default function Home() {
-    //recupere une promise
     const { data } = useLoaderData()
 
     return <div className="home-wrapper">
@@ -20,12 +19,14 @@ export default function Home() {
                 <Await resolve={data}>
                     {(data) => (
                         data.map(d => (
+
                             <Thumb
                                 key={d.id}
                                 id={d.id}
                                 title={d.title}
                                 cover={d.cover}
                             />
+                            
                         ))
                     )}
                 </Await>

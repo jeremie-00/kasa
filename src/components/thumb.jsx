@@ -15,4 +15,3 @@ export default function Thumb({ id, title, cover }) {
         </NavLink>
     )
 }
-    

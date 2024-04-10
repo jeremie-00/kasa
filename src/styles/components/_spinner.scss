@@ -1,10 +1,10 @@
 .contenaire-spinner {
-  @include set-size( 100%,  100%);
+  @include set-size(100%, 100%);
   @include flex($direction: row, $justify: unset, $align: center);
   padding: 50px;
 
   .spinner {
-    @include set-size( 80px,  80px);
+    @include set-size(80px, 80px);
     border: 10px solid $bg_spinner;
     border-top: 10px solid $color_orange;
     border-radius: 50%;
