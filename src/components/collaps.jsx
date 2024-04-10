@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from 'react';
 import arrowCollaps from '@assets/arrow_collaps.png';
 

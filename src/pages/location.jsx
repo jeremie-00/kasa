@@ -1,6 +1,5 @@
-import React from "react";
-import { useLoaderData, Await, useParams } from 'react-router-dom';
 import { Suspense } from "react";
+import { useLoaderData, Await, useParams } from 'react-router-dom';
 
 import Spinner from "@components/spinner";
 import Collaps from "@components/collaps";
@@ -23,57 +22,53 @@ export default function Location() {
                         const { equipments, description, tags, rating, title, location, pictures } = locationData
                         const { name, picture } = locationData.host
 
-                        if (locationData) {
-                            return (
-                                <>
-                                    <SlideShow pictures={pictures} />
+                        return (
+                            <>
+                                <SlideShow pictures={pictures} />
 
-                                    <div className="cardContent">
+                                <div className="cardContent">
 
-                                        <div className='title-tags'>
-                                            <h1>{title}</h1>
-                                            <h2>{location}</h2>
-                                            <div className="tags">
-                                                {tags.map((txt, index) => (
-                                                    <Tag key={index} txt={txt} />
+                                    <div className='title-tags'>
+                                        <h1>{title}</h1>
+                                        <h2>{location}</h2>
+                                        <div className="tags">
+                                            {tags.map((txt, index) => (
+                                                <Tag key={index} txt={txt} />
+                                            ))}
+                                        </div>
+
+                                    </div>
+
+                                    <div className="rating-host">
+                                        <div className="host">
+                                            <Host name={name} picture={picture} />
+                                        </div>
+                                        <div className='rating'>
+                                            <Rating rating={rating} />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div className="collaps-card">
+                                    <div className="description">
+                                        <Collaps title="Description">
+                                            <p>{description}</p>
+                                        </Collaps>
+                                    </div>
+                                    <div className="equipements">
+                                        <Collaps title="Équipements" >
+                                            <ul>
+                                                {equipments.map((txt, index) => (
+                                                    <li key={index}>{txt}</li>
                                                 ))}
-                                            </div>
-
-                                        </div>
-
-                                        <div className="rating-host">
-                                            <div className="host">
-                                                <Host name={name} picture={picture} />
-                                            </div>
-                                            <div className='rating'>
-                                                <Rating rating={rating} />
-                                            </div>
-                                        </div>
-
+                                            </ul>
+                                        </Collaps>
                                     </div>
+                                </div>
+                            </>
 
-                                    <div className="collaps-card">
-                                        <div className="description">
-                                            <Collaps title="Description">
-                                                <p>{description}</p>
-                                            </Collaps>
-                                        </div>
-                                        <div className="equipements">
-                                            <Collaps title="Équipements" >
-                                                <ul>
-                                                    {equipments.map((txt, index) => (
-                                                        <li key={index}>{txt}</li>
-                                                    ))}
-                                                </ul>
-                                            </Collaps>
-                                        </div>
-                                    </div>
-                                </>
-
-                            )
-                        } else {
-                            return null
-                        }
+                        )
                     }}
                 </Await>
             </Suspense>

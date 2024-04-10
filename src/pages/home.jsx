@@ -1,6 +1,5 @@
-import React from "react";
 import { useLoaderData, Await } from 'react-router-dom';
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 
 import Banner from "@components/banner";
 import Spinner from "@components/spinner";

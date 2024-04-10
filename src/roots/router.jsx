@@ -1,4 +1,4 @@
-import * as React from "react";
+//import React from "react";
 import { createBrowserRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
@@ -7,7 +7,7 @@ import Home from "@pages/home";
 import About from "@pages/about";
 import Location from "@pages/location";
 
-function Router() {
+export default function Router() {
 
     const router = createBrowserRouter([
         {
@@ -49,4 +49,3 @@ function Router() {
     return router
 }
 
-export default Router;

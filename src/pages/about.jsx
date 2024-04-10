@@ -1,4 +1,3 @@
-import React from "react";
 import { useLoaderData, Await } from 'react-router-dom';
 import { Suspense } from "react";
 
