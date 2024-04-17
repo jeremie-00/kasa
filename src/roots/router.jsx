@@ -42,7 +42,7 @@ export default function Router() {
                         if (locationData){
                             return defer({ locationData })
                         }else{
-                            throw new Error("logement non ok")
+                            throw new Error("id logement non trouver")
                         }
                         
                     }

@@ -301,6 +301,7 @@ img {
 .container-collaps .content-collaps .content {
   align-self: end;
   min-height: 0;
+  background-color: #f6f6f6;
 }
 .container-collaps .content-collaps .content ul,
 .container-collaps .content-collaps .content p {
