@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { useLoaderData, Await, useParams } from 'react-router-dom';
+import { useLoaderData, Await } from 'react-router-dom';
 
 import Spinner from "@components/spinner";
 import Collaps from "@components/collaps";
@@ -9,18 +9,17 @@ import Host from "@components/host";
 import SlideShow from "@components/slideshow";
 
 export default function Location() {
-    const { data } = useLoaderData()
-    const idUrl = useParams()
-
+    const { locationData } = useLoaderData()
+    
     return <>
         <section className="location-wrapper">
             <Suspense fallback={<Spinner />}>
-                <Await resolve={data}>
+                <Await resolve={locationData}>
                     {(data) => {
 
-                        const locationData = data.find((d) => d.id === idUrl.id);
-                        const { equipments, description, tags, rating, title, location, pictures } = locationData
-                        const { name, picture } = locationData.host
+                        
+                        const { equipments, description, tags, rating, title, location, pictures } = data
+                        const { name, picture } = data.host
 
                         return (
                             <>

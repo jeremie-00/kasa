@@ -36,9 +36,15 @@ export default function Router() {
                 {
                     path: '/location/:id',
                     element: <Location />,
-                    loader: () => {
-                        const data = fetch('/logements.json').then(response => response.json())
-                        return defer({ data })
+                    loader: async ({params}) => {
+                        const data = await fetch('/logements.json').then(response => response.json())
+                        const locationData = data.find((d) => d.id === params.id)
+                        if (locationData){
+                            return defer({ locationData })
+                        }else{
+                            throw new Error("logement non ok")
+                        }
+                        
                     }
 
                 },
