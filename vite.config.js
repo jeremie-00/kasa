@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/kasa/',
   build: {
-    outDir: 'public',
+    outDir: 'dist',
   },
   resolve: {
     alias: [
