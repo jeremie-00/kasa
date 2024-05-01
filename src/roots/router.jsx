@@ -1,4 +1,4 @@
-//import React from "react";
+import React from "react";
 import { createBrowserRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
@@ -17,18 +17,18 @@ export default function Router() {
             errorElement: <PageError />,
             children: [
                 {
-                    path: '/',
+                    path: '/kasa',
                     element: <Home />,
-                    loader: () => {
-                        const data = fetch('/logements.json').then(response => response.json())
+                    loader: async () => {
+                        const data = await fetch('./logements.json').then(response => response.json())
                         return defer({ data })
                     }
                 },
                 {
                     path: '/about',
                     element: <About />,
-                    loader: () => {
-                        const data = fetch('/texte_collaps.json').then(response => response.json())
+                    loader: async () => {
+                        const data = await fetch('./texte_collaps.json').then(response => response.json())
                         return defer({ data })
                     }
 
@@ -37,7 +37,7 @@ export default function Router() {
                     path: '/location/:id',
                     element: <Location />,
                     loader: async ({params}) => {
-                        const data = await fetch('/logements.json').then(response => response.json())
+                        const data = await fetch('./logements.json').then(response => response.json())
                         const locationData = data.find((d) => d.id === params.id)
                         if (locationData){
                             return defer({ locationData })
