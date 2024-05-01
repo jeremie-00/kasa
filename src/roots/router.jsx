@@ -1,4 +1,4 @@
-//import React from "react";
+import React from "react";
 import { createBrowserRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
@@ -11,30 +11,30 @@ export default function Router() {
 
     const router = createBrowserRouter([
         {
-            path: '/kasa/',
+            path: '/',
             element: <RootOutlet />,
             //affiche la page erreur si une erreur est capturée (url ou composent)
             errorElement: <PageError />,
             children: [
                 {
-                    path: '/kasa/',
+                    path: '/kasa',
                     element: <Home />,
-                    loader: () => {
-                        const data = fetch('./logements.json').then(response => response.json())
+                    loader: async () => {
+                        const data = await fetch('./logements.json').then(response => response.json())
                         return defer({ data })
                     }
                 },
                 {
-                    path: '/kasa/about',
+                    path: '/about',
                     element: <About />,
-                    loader: () => {
-                        const data = fetch('./texte_collaps.json').then(response => response.json())
+                    loader: async () => {
+                        const data = await fetch('./texte_collaps.json').then(response => response.json())
                         return defer({ data })
                     }
 
                 },
                 {
-                    path: '/kasa/location/:id',
+                    path: '/location/:id',
                     element: <Location />,
                     loader: async ({params}) => {
                         const data = await fetch('./logements.json').then(response => response.json())
