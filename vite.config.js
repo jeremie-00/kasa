@@ -6,6 +6,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   base:'/kasa',
+  base: '/kasa',
   resolve: {
     alias: [
       {
