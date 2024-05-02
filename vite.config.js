@@ -5,7 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:'/kasa',
+  base:'https://jeremie-00.github.io/src/main.jsx',
   resolve: {
     alias: [
       {
