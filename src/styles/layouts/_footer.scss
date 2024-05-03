@@ -1,6 +1,0 @@
-.footer {
-  @extend .flexColumn;
-  @include set-size(100%, 209px);
-  background-color: $bg_footer;
-  gap: 30px;
-}
