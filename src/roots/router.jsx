@@ -20,7 +20,7 @@ export default function Router() {
                     path: '/kasa',
                     element: <Home />,
                     loader: () => {
-                        const data = fetch('../public/logements.json').then(response => response.json())
+                        const data = fetch('../../public/logements.json').then(response => response.json())
                         return defer({ data })
                     }
                 },
@@ -28,7 +28,7 @@ export default function Router() {
                     path: '/kasa/about',
                     element: <About />,
                     loader: () => {
-                        const data = fetch('../public/texte_collaps.json').then(response => response.json())
+                        const data = fetch('../../public/texte_collaps.json').then(response => response.json())
                         return defer({ data })
                     }
 
@@ -37,7 +37,7 @@ export default function Router() {
                     path: '/kasa/location/:id',
                     element: <Location />,
                     loader: async ({params}) => {
-                        const data = await fetch('../public/logements.json').then(response => response.json())
+                        const data = await fetch('../../public/logements.json').then(response => response.json())
                         const locationData = data.find((d) => d.id === params.id)
                         if (locationData){
                             return defer({ locationData })
