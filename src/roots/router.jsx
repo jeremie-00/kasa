@@ -11,13 +11,13 @@ export default function Router() {
 
     const router = createBrowserRouter([
         {
-            path: '/kasa/',
+            path: '/',
             element: <RootOutlet />,
             //affiche la page erreur si une erreur est capturée (url ou composent)
             errorElement: <PageError />,
             children: [
                 {
-                    path: '/kasa/',
+                    path: '/',
                     element: <Home />,
                     loader: () => {
                         const data = fetch('/logements.json').then(response => response.json())
