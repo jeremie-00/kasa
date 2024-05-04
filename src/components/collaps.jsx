@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import arrowCollaps from '@assets/arrow_collaps.png';
+import arrowCollaps from '../assets/arrow_collaps.png';
 
 export default function Collaps({ children, title }) {
     const [active, setActive] = useState(false)

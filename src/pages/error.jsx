@@ -1,5 +1,5 @@
-import Header from "@layouts/header";
-import Footer from "@layouts/footer";
+import Header from "../layouts/header";
+import Footer from "../layouts/footer";
 
 export default function PageError() {
     return <>

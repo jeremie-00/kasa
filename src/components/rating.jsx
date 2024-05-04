@@ -1,5 +1,5 @@
-import StarActive from '@assets/star_active.png';
-import StarInactive from '@assets/star_inactive.png';
+import StarActive from '../assets/star_active.png';
+import StarInactive from '../assets/star_inactive.png';
 
 const maxStars = 5
 

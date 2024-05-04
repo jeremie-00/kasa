@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import arrowLeft from "@assets/arrow_left.png"
-import arrowRight from "@assets/arrow_right.png"
+import arrowLeft from "../assets/arrow_left.png"
+import arrowRight from "../assets/arrow_right.png"
 
 export default function SlideShow({ pictures }) {
     const [activeIndex, setActiveIndex] = useState(0)

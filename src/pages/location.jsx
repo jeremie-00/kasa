@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import { useLoaderData, Await } from 'react-router-dom';
 
-import Spinner from "@components/spinner";
-import Collaps from "@components/collaps";
-import Tag from "@components/tag";
-import Rating from "@components/rating";
-import Host from "@components/host";
-import SlideShow from "@components/slideshow";
+import Spinner from "../components/spinner";
+import Collaps from "../components/collaps";
+import Tag from "../components/tag";
+import Rating from "../components/rating";
+import Host from "../components/host";
+import SlideShow from "../components/slideshow";
 
 export default function Location() {
     const { locationData } = useLoaderData()

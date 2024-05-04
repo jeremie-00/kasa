@@ -1,10 +1,10 @@
 import { useLoaderData, Await } from 'react-router-dom';
 import { Suspense } from "react";
 
-import Banner from "@components/banner";
-import Spinner from "@components/spinner";
-import Thumb from "@components/thumb"
-import srcBannerHome from '@assets/banner_home.png';
+import Banner from "../components/banner";
+import Spinner from "../components/spinner";
+import Thumb from "../components/thumb"
+import srcBannerHome from '../assets/banner_home.png';
 
 export default function Home() {
     const { data } = useLoaderData()

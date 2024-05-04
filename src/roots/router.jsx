@@ -2,10 +2,10 @@ import React from "react";
 import { createBrowserRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
-import PageError from "@pages/error"
-import Home from "@pages/home";
-import About from "@pages/about";
-import Location from "@pages/location";
+import PageError from "../pages/error"
+import Home from "../pages/home";
+import About from "../pages/about";
+import Location from "../pages/location";
 
 export default function Router() {
 

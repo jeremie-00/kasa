@@ -1,4 +1,4 @@
-import logoHeader from '@assets/logo_header.png';
+import logoHeader from '../assets/logo_header.png';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {
