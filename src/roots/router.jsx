@@ -17,7 +17,7 @@ export default function Router() {
             errorElement: <PageError />,
             children: [
                 {
-                    path: '/kasa/',
+                    path: '/kasa/home',
                     element: <Home />,
                     loader: () => {
                         const data = fetch('logements.json').then(response => response.json())
