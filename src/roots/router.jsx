@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, defer } from 'react-router-dom';
+import { createMemoryRouter, defer } from 'react-router-dom';
 
 import RootOutlet from "./rootOutlet";
 import PageError from "../pages/error"
@@ -9,42 +9,43 @@ import Location from "../pages/location";
 
 export default function Router() {
 
-    const router = createBrowserRouter([
+    const router = createMemoryRouter([
         {
-            path: '/kasa',
+            path: '/',
             element: <RootOutlet />,
             //affiche la page erreur si une erreur est capturée (url ou composent)
             errorElement: <PageError />,
             children: [
                 {
-                    path: '/kasa/home',
+                    path: '/',
                     element: <Home />,
-                    loader: () => {
-                        const data = fetch('logements.json').then(response => response.json())
+                    loader: async () => {
+                        const data = await fetch('./logements.json').then(response => response.json())
                         return defer({ data })
                     }
                 },
                 {
-                    path: '/kasa/about',
+                    path: '/about',
                     element: <About />,
                     loader: () => {
-                        const data = fetch('texte_collaps.json').then(response => response.json())
+                        const data = fetch('./texte_collaps.json').then(response => response.json())
                         return defer({ data })
+
                     }
 
                 },
                 {
-                    path: '/kasa/location/:id',
+                    path: '/location/:id',
                     element: <Location />,
-                    loader: async ({params}) => {
-                        const data = await fetch('logements.json').then(response => response.json())
+                    loader: async ({ params }) => {
+                        const data = await fetch('./logements.json').then(response => response.json())
                         const locationData = data.find((d) => d.id === params.id)
-                        if (locationData){
+                        if (locationData) {
                             return defer({ locationData })
-                        }else{
+                        } else {
                             throw new Error("id logement non trouver")
                         }
-                        
+
                     }
 
                 },
