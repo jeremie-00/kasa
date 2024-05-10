@@ -8,14 +8,14 @@ import srcBannerHome from '../assets/banner_home.png';
 
 export default function Home() {
     const { data } = useLoaderData()
-
+    localStorage.setItem('homeData', data)
     return <div className="home-wrapper">
         <Banner cls='home-banner' srcBanner={srcBannerHome}>
             <h1>Chez vous, <span>partout et ailleurs</span></h1>
         </Banner>
         <div className="home-logements">
             <Suspense fallback={<Spinner />}>
-                <Await resolve={data}>
+                <Await resolve={ data }>
                    
                     {(data) => (
                         data.map(d => (

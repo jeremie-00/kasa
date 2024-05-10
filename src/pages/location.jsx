@@ -16,6 +16,7 @@ export default function Location() {
             <Suspense fallback={<Spinner />}>
                 <Await resolve={locationData}>
                     {(data) => {
+                  
 
                         const { equipments, description, tags, rating, title, location, pictures } = data
                         const { name, picture } = data.host
