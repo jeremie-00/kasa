@@ -16,6 +16,7 @@ export default function Home() {
         <div className="home-logements">
             <Suspense fallback={<Spinner />}>
                 <Await resolve={data}>
+                   
                     {(data) => (
                         data.map(d => (
 

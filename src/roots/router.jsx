@@ -21,19 +21,19 @@ export default function Router() {
                 {
                     path: '/kasa/',
                     element: <Home />,
-                    loader: () => {
-                        const data = fetch('./logements.json').then(response => response.json())
+                    loader: async () =>  {
+                        const data = await fetch('./logements.json').then(response => response.json())
                         return defer({ data })
-                    }
+                    },
+                    
                 },
                 {
                     path: '/kasa/about',
                     element: <About />,
-                    loader: () => {
-                        const data = fetch('./texte_collaps.json').then(response => response.json())
+                    loader: async () => {
+                        const data = await fetch('./texte_collaps.json').then(response => response.json())
                         return defer({ data })
-
-                    }
+                    },
 
                 },
                 {
@@ -48,7 +48,7 @@ export default function Router() {
                             throw new Error("id logement non trouver")
                         }
 
-                    }
+                    },
 
                 },
 
