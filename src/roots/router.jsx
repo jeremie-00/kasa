@@ -13,34 +13,34 @@ export default function Router() {
     const router = createBrowserRouter([
         {
             basename:'/kasa/',
-            path: '/',
+            path: '/kasa/',
             element: <RootOutlet />,
             //affiche la page erreur si une erreur est capturée (url ou composent)
             errorElement: <PageError />,
             children: [
                 {
-                    path: '/',
+                    path: '/kasa/',
                     element: <Home />,
                     loader: () => {
-                        const data = fetch('/logements.json').then(response => response.json())
+                        const data = fetch('./logements.json').then(response => response.json())
                         return defer({ data })
                     }
                 },
                 {
-                    path: 'about',
+                    path: '/kasa/about',
                     element: <About />,
                     loader: () => {
-                        const data = fetch('/texte_collaps.json').then(response => response.json())
+                        const data = fetch('./texte_collaps.json').then(response => response.json())
                         return defer({ data })
 
                     }
 
                 },
                 {
-                    path: 'location/:id',
+                    path: '/kasa/location/:id',
                     element: <Location />,
                     loader: async ({ params }) => {
-                        const data = await fetch('/logements.json').then(response => response.json())
+                        const data = await fetch('./logements.json').then(response => response.json())
                         const locationData = data.find((d) => d.id === params.id)
                         if (locationData) {
                             return defer({ locationData })
