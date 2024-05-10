@@ -8,8 +8,8 @@ export default function Header() {
       <header className='header'>
         <img className='logo' src={logoHeader} alt='logo kasa' />
         <nav className='nav'>
-          <NavLink to="/kasa/" end>Accueil</NavLink>
-          <NavLink to="/kasa/about">A propos</NavLink>
+          <NavLink to="/" end>Accueil</NavLink>
+          <NavLink to="/about">A propos</NavLink>
         </nav>
       </header>
     </div>

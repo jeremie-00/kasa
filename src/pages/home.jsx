@@ -8,29 +8,28 @@ import srcBannerHome from '../assets/banner_home.png';
 
 export default function Home() {
     const { data } = useLoaderData()
-    localStorage.setItem('homeData', data)
-    return <div className="home-wrapper">
-        <Banner cls='home-banner' srcBanner={srcBannerHome}>
-            <h1>Chez vous, <span>partout et ailleurs</span></h1>
-        </Banner>
-        <div className="home-logements">
-            <Suspense fallback={<Spinner />}>
-                <Await resolve={ data }>
-                   
-                    {(data) => (
-                        data.map(d => (
-
-                            <Thumb
-                                key={d.id}
-                                id={d.id}
-                                title={d.title}
-                                cover={d.cover}
-                            />
-                            
-                        ))
-                    )}
-                </Await>
-            </Suspense>
+  
+    return (
+        <div className="home-wrapper">
+            <Banner cls='home-banner' srcBanner={srcBannerHome}>
+                <h1>Chez vous, <span>partout et ailleurs</span></h1>
+            </Banner>
+            <div className="home-logements">
+                <Suspense fallback={<Spinner />}>
+                    <Await resolve={data}>
+                        {(data) => (
+                            data.map(d => (
+                                <Thumb
+                                    key={d.id}
+                                    id={d.id}
+                                    title={d.title}
+                                    cover={d.cover}
+                                />
+                            ))
+                        )}
+                    </Await>
+                </Suspense>
+            </div>
         </div>
-    </div>
+    );
 }
