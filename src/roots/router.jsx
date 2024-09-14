@@ -47,7 +47,7 @@ export default function Router() {
             if (locationData) {
               return defer({ locationData });
             } else {
-              throw new Error("id logement non trouver");
+              throw new Error("id logement non trouver ");
             }
           },
         },
