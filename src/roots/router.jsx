@@ -10,37 +10,37 @@ import RootOutlet from "./rootOutlet";
 export default function Router() {
   const router = createBrowserRouter([
     {
-      // basename:'/kasa/',
-      path: "/",
+      // basename: "/kasa/",
+      path: "/kasa/",
       element: <RootOutlet />,
       //affiche la page erreur si une erreur est capturée (url ou composent)
       errorElement: <PageError />,
       children: [
         {
-          path: "/",
+          path: "/kasa/",
           element: <Home />,
           loader: async () => {
-            const data = await fetch("/logements.json").then((response) =>
+            const data = await fetch("/kasa/logements.json").then((response) =>
               response.json()
             );
             return defer({ data });
           },
         },
         {
-          path: "about",
+          path: "/kasa/about",
           element: <About />,
           loader: async () => {
-            const data = await fetch("/texte_collaps.json").then((response) =>
-              response.json()
+            const data = await fetch("/kasa/texte_collaps.json").then(
+              (response) => response.json()
             );
             return defer({ data });
           },
         },
         {
-          path: "location/:id",
+          path: "/kasa/location/:id",
           element: <Location />,
           loader: async ({ params }) => {
-            const data = await fetch("/logements.json").then((response) =>
+            const data = await fetch("/kasa/logements.json").then((response) =>
               response.json()
             );
             const locationData = data.find((d) => d.id === params.id);
